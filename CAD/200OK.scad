@@ -1,41 +1,88 @@
-// 60% keyboard case
-// Keyboard PCB
-// Pizero W
+// 70% keyboard case // Keyboard PCB // Pizero W
 
-keys_height=153;
-keys_depth=35;
-keys_width=429;
-
-case_height=160;
-case_depth=40;
-case_width=436;
-
-pizero_height=65;
-pizero_depth=5;
-pizero_width=30;
+Akeys=[153,15,381];
+Apcb=[153,2,381];
+Acase=[157,15,386];
+Apizero=[65,2,30];
 
 module case() {
     difference(){
-        cube([case_height, case_depth, case_width], center=true);
-        translate([0,11,0]){
-            cube([keys_height, keys_depth, keys_width], center=true);
+        cube(case, center=true);
+        translate([0,1,0]){
+            cube(Akeys, center=true);
         }
     }
 }
 
-module pizero() {
-    translate([-50,50,0]){
+module pi_sd() {
+    translate([-60,4,-26]){
+        rotate([90,0,0]){
+            cube([12,14,1], center=true);
+        }
+    }
+}
+
+module pi_cpu() {
+    translate([-66,4,-8]){
+        rotate([90,0,0]){
+            cube([12,12,2], center=true);
+        }
+    }
+}
+
+module usb_power() {
+    translate([-75,4,21]){
         rotate([0,90,0]){
-            cube([pizero_height,pizero_depth,pizero_width], center=true);
+            cube([6,2,4], center=true);
+        }
+    }
+}
+
+module micro_usb() {
+    translate([-75,4,9]){
+        rotate([0,90,0]){
+            cube([6,2,4], center=true);
+        }
+    }
+}
+
+module hdmi() {
+    translate([-74,4,-20]){
+        rotate([0,90,0]){
+            cube([10,3,6], center=true);
+        }
+    }
+}
+
+module pizero_pcb() {
+    translate([-62,2,0]){
+        rotate([0,90,0]){
+            cube(Apizero, center=true);
         }
     }
 }
 
 module PCB() {
-    translate([0,100,0]){
+    translate([0,0,0]){
         rotate([0,180,0]){
-            cube([keys_height,10,keys_width], center=true);
+            cube(Apcb, center=true);
         }
     }
 }
 
+module pizero() {
+    translate([1,0,20]){
+        rotate([180,180,0]){
+            pizero_pcb();
+            hdmi();
+            micro_usb();
+            usb_power();
+            pi_cpu();
+            pi_sd();
+        }
+    }
+}
+
+pizero();
+//case();
+//PCB();
