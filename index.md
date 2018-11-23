@@ -1,19 +1,30 @@
 % [ 200 OK ] The Minimalists' Linux Workstation
 % vim, tmux, git and repeat
 
-Freeze block 1
-Start block 2
+## history
+  * Freeze block 1
+  * Start block 2
 
+## Intro
 
-You are hacking Linux and programming and want a minimalist environment for
-sysadmin tasks and typing in Vim. You want a simple environment which will help
-you get things done.
+### THE FEEDBACK SYSTEM
+
+Major linux distributions will source to us linux questions and we will present
+to the user when the feeback button is pressed
+
+You use programming to hack stuffs, and you do it with Linux. You have learned
+the minimalistic ways of the terminal and use vim do change your config files.
+You share your code with git and think tmux is the best DE ever :D
+
+You want a simple environment which will help you get things done.
+
+## AD1
 
 There are so many paths a developer can take because there are hundreds of
 programming languages in use. In terms of ecosystems, your IDE can be VS Code
 running on Windows, Xcode in MacOS or Vim and Emacs in Linux.
 
-Bu this doesn't necessarily materialize for everyone. You might use Notepad++
+But this doesn't necessarily materialize for everyone. You might use Notepad++
 or Notepad for simple stuffs. Or you might use Atom or Netbeans. Every
 developer is comfortable with different tools.
 
@@ -62,6 +73,8 @@ Block 1 software list:
   * Case design in openscad
   * Create PCB components list: ATMega16U2, audio out
   * I wish it could boot instanteneously - text mode and busybox?
+  * adapter in the case to fit a smartphone
+  * replace the arrow keys for a thumbstick?
 
 ## Resources
 
